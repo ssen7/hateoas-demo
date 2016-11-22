@@ -68,7 +68,7 @@ public class UserController {
 		
 	}
 	
-	@RequestMapping(value = "/user/{id}/withdraw/{amount}", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
+	@RequestMapping(value = "/user/{id}/withdraw/{amount}", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.PUT)
 	@ResponseBody
 	public Resource<User> withdraw(@PathVariable(value = "id")Integer id, @PathVariable(value = "amount")Integer amount){
 		
@@ -77,7 +77,7 @@ public class UserController {
 				
 	}
 	
-	@RequestMapping(value = "/user/{id}/deposit/{amount}", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
+	@RequestMapping(value = "/user/{id}/deposit/{amount}", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.PUT)
 	@ResponseBody
 	public Resource<User> deposit(@PathVariable(value = "id")Integer id, @PathVariable(value = "amount")Integer amount){
 		
