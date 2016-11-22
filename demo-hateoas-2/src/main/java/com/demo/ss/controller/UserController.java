@@ -56,9 +56,9 @@ public class UserController {
 		resource.add(linkTo(methodOn(AccountController.class).getAccount(user.getAccount().getAccountNo())).withRel("account Number"));
 		
 		if(user.getAccount().getBalance()>0)
-			resource.add(linkTo(methodOn(UserController.class).withdraw(user.getUserId(), user.getUserId())).withRel("withdrawable"));
+			resource.add(linkTo(methodOn(UserController.class).withdraw(user.getUserId(), user.getUserId())).withRel("withdrawable"));//TO DO
 		else{
-			resource.add(linkTo(methodOn(UserController.class).deposit(user.getUserId(), user.getUserId())).withRel("deposit.first!"));
+			resource.add(linkTo(methodOn(UserController.class).deposit(user.getUserId(), user.getUserId())).withRel("deposit.first!"));//TO DO
 		}
 		
 		resource.add(linkTo(methodOn(UserController.class).deposit(user.getUserId(), user.getUserId())).withRel("deposit"));
